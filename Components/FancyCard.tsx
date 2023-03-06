@@ -18,9 +18,7 @@ export default function FancyCard() {
           <Text style={styles.cardDescription}>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, aut.
           </Text>
-          <Text style={styles.cardFooter}>
-            12 min away
-          </Text>
+          <Text style={styles.cardFooter}>12 min away</Text>
         </View>
       </View>
     </View>
@@ -33,14 +31,51 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     paddingHorizontal: 10,
   },
-  card: {},
-  cardElevated: {},
+  card: {
+    width: 380,
+    height: 330,
+    borderRadius: 6,
+    marginVertical: 12,
+    marginHorizontal: 16,
+  },
+  cardElevated: {
+    backgroundColor: 'white',
+    elevation: 3,
+    shadowOffset: {
+      width: 1,
+      height: 1,
+    },
+  },
   cardImage: {
     height: 180,
+    marginBottom: 10,
+    borderTopLeftRadius: 6,
+    borderTopRightRadius: 6,
   },
-  cardBody: {},
-  cardTitle: {},
-  cardLabel: {},
-  cardDescription: {},
-  cardFooter:{},
+  cardBody: {
+    flex: 1,
+    flexGrow: 1,
+    paddingHorizontal: 12,
+  },
+  cardTitle: {
+    color: '#000000',
+    fontSize: 22,
+    fontWeight: 'bold',
+    marginBottom: 6,
+  },
+  cardLabel: {
+    color: '#000000',
+    fontSize: 16,
+    marginBottom: 6,
+  },
+  cardDescription: {
+    color: '#000000',
+    fontSize: 14,
+    marginBottom: 12,
+    marginTop: 6,
+  },
+  cardFooter: {
+    color: '#000000',
+    fontSize: 12,
+  },
 });
