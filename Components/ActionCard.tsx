@@ -42,6 +42,12 @@ export default function ActionCard() {
             }}>
             <Text style={styles.socialLinks}>Read More</Text>
           </TouchableOpacity>
+          <TouchableOpacity
+            onPress={() => {
+              openWebsite('https://www.instagram.com/ajay.pradhan02');
+            }}>
+            <Text style={styles.socialLinks}>Follow Me</Text>
+          </TouchableOpacity>
         </View>
       </View>
     </View>
@@ -54,14 +60,53 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     paddingHorizontal: 10,
   },
-  card: {},
-  elevatedCard: {},
-  headingContainer: {},
-  headerText: {},
-  cardImage: {
-    height: 100,
+  card: {
+    width: 380,
+    height: 350,
+    borderRadius: 6,
+    marginVertical: 12,
+    marginHorizontal: 16,
   },
-  bodyContainer: {},
-  footerContainer: {},
-  socialLinks: {},
+  elevatedCard: {
+    backgroundColor: '#e07c24',
+    elevation: 3,
+    shadowOffset: {
+      width: 1,
+      height: 1,
+    },
+    shadowColor: '#333',
+    shadowOpacity: 0.4,
+  },
+  headingContainer: {
+    height: 40,
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  headerText: {
+    color: '#000000',
+    fontSize: 15,
+    fontWeight: '600',
+  },
+  cardImage: {
+    height: 190,
+  },
+  bodyContainer: {
+    padding: 10,
+  },
+  footerContainer: {
+    padding: 8,
+    flexDirection: 'row',
+    justifyContent: 'space-evenly',
+    alignItems: 'center',
+  },
+  socialLinks: {
+    fontSize: 16,
+    color: '#000000',
+    backgroundColor: 'white',
+    paddingHorizontal: 20,
+    paddingVertical:4,
+    fontWeight: '600',
+    borderRadius:4
+  },
 });
